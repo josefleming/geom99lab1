@@ -9,11 +9,11 @@ Be creative and use multiple parameters from the API documentation to earn a top
 ## Directions URL
 
 ```
-[https://YourDirectionsApiURLGoesHere](https://maps.googleapis.com/maps/api/directions/json
+https://YourDirectionsApiURLGoesHere](https://maps.googleapis.com/maps/api/directions/json
   ?destination=place_id:ChIJbU60yXAWrjsR4E9-UejD3_g
   &origin=place_id:ChIJW_Wc1P8SCDsRmXw47fuQvWQ
   &waypoints=place_id:ChIJW_Wc1P8SCDsRmXw47fuQvWQ
-  &key=AIzaSyCM-WWHYHIKY-do4kquMy9Z4wQaQx51AuE)
+  &key=AIzaSyCM-WWHYHIKY-do4kquMy9Z4wQaQx51AuE
 ```
 
 ## Next paste the full JSON response to this query here:
