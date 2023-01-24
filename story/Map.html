@@ -1,16 +1,20 @@
+<!DOCTYPE html>
 <html>
   <head>
-    <title>Overlay Map Types</title>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <title>The Silk Route</title>
     <script type="module" src="./index.js"></script>
   </head>
-  <style>
-    /* 
+<style>
+      /* Add some basic styling */
+
+      /* 
  * Always set the map height explicitly to define the size of the div element
  * that contains the map. 
  */
 #map {
-    height: 100%;
+    height:300px;
+    width:100%px;
+    
   }
   
   /* 
@@ -22,20 +26,84 @@
     margin: 0;
     padding: 0;
   }
-  </style>
-  <body>
-    
-    <div id="map"></div>
 
+      
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      
+      /* Create a header section */
+      header {
+        background-color: #e0e0e0;
+        padding: 20px;
+        text-align: center;
+      }
+      
+      /* Style the main content section */
+      .main-content {
+        margin: 0;
+        padding: 20px;
+      }
+      
+      /* Add a sidebar section */
+      .sidebar {
+        background-color: #f0f0f0;
+        float: right;
+        width: 20%;
+        margin: 0;
+        padding: 20px;
+      }
+      
+      /* Style the images */
+      img {
+        width: 100%;
+        height: auto;
+      }
+      .middle-container {
+  background-color: lightblue;
+  width: 800px;
+  margin: auto;
+  border: 4px solid #73AD21;
+ 
+}
+    </style>
+
+ <body>
+    <header>
+      <h1>The Silk Route</h1>
+    </header>
+
+
+    <div class="main-content">
+      <p>The Silk Route was a network of trade routes that connected Asia, Africa, and Europe. It was a vital trade network that existed for centuries, and was used to transport silk, spices, and other goods between the regions.</p>
+      <p>The Silk Route was not a single road, but rather a network of trade routes that passed through deserts, mountains, and other difficult terrain. The route changed over time, as new trade routes were developed and old ones fell into disuse.</p>
+      
+    </div>
+
+    <div class="sidebar">
+      <h3>Famous Cities of Silk Route</h3>
+      <ul>
+        <li> Beijing, China</li>
+        <li>India</li>
+        <li>Bukhara, Uzbekistan</li>
+        <li>Spain</li>
+        <li>Los Angeles, USA</li>
+      </ul>.
+    </div>
+    <!-- <div id="googleMap" style="width:100%;height:400px"></div> -->
+    <div id="map" ></div>
     <!-- 
-      The `defer` attribute causes the callback to execute after the full HTML
-      document has been parsed. For non-blocking uses, avoiding race conditions,
-      and consistent behavior across browsers, consider loading using Promises
-      with https://www.npmjs.com/package/@googlemaps/js-api-loader.
-      -->
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDv3MGflguusDaLmV_-BUlmuoUI4EbM88w&callback=initMap&v=weekly"
-      defer
-    ></script>
+          The `defer` attribute causes the callback to execute after the full HTML
+          document has been parsed. For non-blocking uses, avoiding race conditions,
+          and consistent behavior across browsers, consider loading using Promises
+          with https://www.npmjs.com/package/@googlemaps/js-api-loader.
+          -->
+        <script
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB98fbtam4fWOVQv7XTsuGkiydQA9CvE_w&callback=initMap&v=weekly"
+          defer></script>
+    
+   </div>
   </body>
 </html>
