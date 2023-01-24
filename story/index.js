@@ -10,11 +10,10 @@
  * Try panning and zooming the map to see how the coordinates change.
  */
 
-  function initMap() {
+function initMap() {
     var map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 3
-      ,
-      center: {lat: 39.9042, lng: 116.4074}
+      zoom: 3,
+      center: {lat: 41.3851, lng: 2.1734}
     });
     var markerA = new google.maps.Marker({
         position: {lat: 39.9042, lng: 116.4074},
@@ -136,7 +135,6 @@ markerC.addListener('click', function() {
   }
   
   window.initMap = initMap;
-
 
 
 
