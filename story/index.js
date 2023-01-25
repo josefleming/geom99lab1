@@ -27,7 +27,6 @@ function initMap() {
         },
         title: 'Marker A: Beijing, China'
       });
-      
       var markerD = new google.maps.Marker({
         position: {lat: 37.7749, lng: -122.4194},
         map: map,
@@ -39,7 +38,6 @@ function initMap() {
         },
         title: 'Marker D: Los Angeles, USA'
       });
-      
       var markerC = new google.maps.Marker({
         position: {lat: 41.3851, lng: 2.1734},
         map: map,
@@ -63,15 +61,13 @@ function initMap() {
         },
         title: 'Marker B India'
       });
-
-      var silkRouteCoordinates = [
+    var silkRouteCoordinates = [
         {lat: 39.9042, lng: 116.4074},
         {lat: 20.5937, lng: 78.9629},
         {lat: 41.3851, lng: 2.1734},
         {lat: 37.7749, lng: -122.4194},
         
       ];
-      
       var silkRoutePath = new google.maps.Polyline({
         path: silkRouteCoordinates,
         geodesic: true,
@@ -95,7 +91,6 @@ function initMap() {
           repeat: '20px'
         }]
       });
-      
       silkRoutePath.setMap(map);
       // Create the info window for marker A
     var infowindowA = new google.maps.InfoWindow({
@@ -126,14 +121,9 @@ markerB.addListener('click', function() {
 markerC.addListener('click', function() {
     infowindowD.open(map, markerD);
 });
- 
-
-    const coordMapType = new CoordMapType(new google.maps.Size(256, 256));
-  
-    map.overlayMapTypes.insertAt(0, coordMapType);
-    
-  }
-  
+ const coordMapType = new CoordMapType(new google.maps.Size(256, 256));
+  map.overlayMapTypes.insertAt(0, coordMapType);
+     }
   window.initMap = initMap;
 
 
