@@ -53,6 +53,8 @@ function initMap() {
     },
     title: 'Marker B India',
   });
+  
+  // Coordinate table
   const silkRouteCoordinates = [
     { lat: 39.9042, lng: 116.4074 },
     { lat: 20.5937, lng: 78.9629 },
