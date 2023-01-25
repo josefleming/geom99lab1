@@ -1,23 +1,15 @@
-/*
- * This demo illustrates the coordinate system used to display map tiles in the
- * API.
- *
- * Tiles in Google Maps are numbered from the same origin as that for
- * pixels. For Google's implementation of the Mercator projection, the origin
- * tile is always at the northwest corner of the map, with x values increasing
- * from west to east and y values increasing from north to south.
- *
- * Try panning and zooming the map to see how the coordinates change.
- */
 
 function initMap() {
   const map = new google.maps.Map(document.getElementById('map'), {
     zoom: 3,
     center: { lat: 41.3851, lng: 2.1734 },
   });
+  
+  // Adding marker and labels
+  // https://developers.google.com/maps/documentation/javascript/examples/marker-labels
+
   const markerA = new google.maps.Marker({
     position: { lat: 39.9042, lng: 116.4074 },
-
     map,
     label: {
       text: 'A',
@@ -68,6 +60,10 @@ function initMap() {
     { lat: 37.7749, lng: -122.4194 },
 
   ];
+
+  // https://developers.google.com/maps/documentation/javascript/examples/polyline-simple
+  // Polyline features of google maps api.
+
   var silkRoutePath = new google.maps.Polyline({
     path: silkRouteCoordinates,
     geodesic: true,
@@ -97,7 +93,7 @@ function initMap() {
     content: "Beijing, China -The Silk route network began with the Han dynasty's (China) expansion into Central Asia around 114 BCE, which largely pacified the once untamed region.",
   });
   markerA.addListener('click', () => {
-    infowindowA.open(map, markerA);
+  infowindowA.open(map, markerA);
   });
   // Create the info window for marker B
   const infowindowB = new google.maps.InfoWindow({
